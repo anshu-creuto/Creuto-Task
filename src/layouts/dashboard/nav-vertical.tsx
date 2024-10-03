@@ -6,8 +6,8 @@ import { useTheme } from '@mui/material/styles';
 
 import { varAlpha, hideScrollY } from 'src/theme/styles';
 
-import { Logo } from 'src/components/logo';
 import { Scrollbar } from 'src/components/scrollbar';
+import AccountMenu from 'src/components/account-menu/account-menu';
 import { NavSectionMini, NavSectionVertical } from 'src/components/nav-section';
 
 import { NavUpgrade } from '../components/nav-upgrade';
@@ -39,8 +39,9 @@ export function NavVertical({
   const renderNavVertical = (
     <>
       {slots?.topArea ?? (
-        <Box sx={{ pl: 3.5, pt: 2.5, pb: 1 }}>
-          <Logo />
+        <Box sx={{ display: 'flex', justifyContent: 'center', pt: 2.5, pb: 1 }}>
+          <AccountMenu />
+          {/* <NotificationsDrawer /> */}
         </Box>
       )}
 
@@ -56,7 +57,8 @@ export function NavVertical({
     <>
       {slots?.topArea ?? (
         <Box sx={{ display: 'flex', justifyContent: 'center', py: 2.5 }}>
-          <Logo />
+          <AccountMenu />
+          {/* <NotificationsDrawer /> */}
         </Box>
       )}
 
