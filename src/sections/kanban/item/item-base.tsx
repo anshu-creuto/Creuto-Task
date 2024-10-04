@@ -124,7 +124,7 @@ const ItemBase = forwardRef<HTMLLIElement, ItemBaseProps>(
 
     const renderImg = !!task?.attachments?.length && (
       <Box sx={{ p: theme.spacing(1, 1, 0, 1) }}>
-        <Box
+        {/* <Box
           component="img"
           className={imageClasses.root}
           alt={task?.attachments?.[0]}
@@ -136,13 +136,13 @@ const ItemBase = forwardRef<HTMLLIElement, ItemBaseProps>(
             aspectRatio: '4/3',
             objectFit: 'cover',
           }}
-        />
+        /> */}
       </Box>
     );
 
     const renderInfo = (
       <Stack direction="row" alignItems="center">
-        <Stack
+        {/* <Stack
           flexGrow={1}
           direction="row"
           alignItems="center"
@@ -156,13 +156,13 @@ const ItemBase = forwardRef<HTMLLIElement, ItemBaseProps>(
 
           <Iconify width={16} icon="eva:attach-2-fill" sx={{ mr: 0.25 }} />
           <Box component="span">{task?.attachments?.length}</Box>
-        </Stack>
+        </Stack> */}
 
-        <AvatarGroup sx={{ [`& .${avatarGroupClasses.avatar}`]: { width: 24, height: 24 } }}>
+        {/* <AvatarGroup sx={{ [`& .${avatarGroupClasses.avatar}`]: { width: 24, height: 24 } }}>
           {task?.assignee?.map((user) => (
             <Avatar key={user.id} alt={user.name} src={user.avatarUrl} />
           ))}
-        </AvatarGroup>
+        </AvatarGroup> */}
       </Stack>
     );
 

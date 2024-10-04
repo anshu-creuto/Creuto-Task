@@ -36,6 +36,7 @@ export function NavSectionVertical({
             key={group.subheader ?? group.items[0].title}
             subheader={group.subheader}
             items={group.items}
+            group={group}
             render={render}
             slotProps={slotProps}
             enabledRootRedirect={enabledRootRedirect}
@@ -48,7 +49,7 @@ export function NavSectionVertical({
 
 // ----------------------------------------------------------------------
 
-function Group({ items, render, subheader, slotProps, enabledRootRedirect }: NavGroupProps) {
+function Group({ items, render, subheader, slotProps, enabledRootRedirect, group }: NavGroupProps) {
   const [open, setOpen] = useState(true);
 
   const handleToggle = useCallback(() => {

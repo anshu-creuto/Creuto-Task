@@ -46,6 +46,7 @@ export type NavItemBaseProps = {
   slotProps?: NavItemSlotProps;
   icon?: string | React.ReactNode;
   info?: string[] | React.ReactNode;
+  custom?: boolean;
 };
 
 export type NavItemProps = ButtonBaseProps & NavItemStateProps & NavItemBaseProps;
@@ -65,6 +66,7 @@ export type NavSubListProps = Omit<NavListProps, 'data'> & {
 
 export type NavGroupProps = Omit<NavListProps, 'data' | 'depth'> & {
   subheader?: string;
+  group?: any;
   items: NavItemBaseProps[];
 };
 

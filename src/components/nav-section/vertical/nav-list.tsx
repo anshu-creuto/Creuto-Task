@@ -36,6 +36,10 @@ export function NavList({ data, render, depth, slotProps, enabledRootRedirect }:
     setOpenMenu(false);
   }, []);
 
+  if(data.custom){
+    return data.render
+  }
+
   const renderNavItem = (
     <NavItem
       render={render}

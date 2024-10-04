@@ -361,7 +361,7 @@ export function KanbanView() {
       >
         <Typography variant="h4">Kanban</Typography>
 
-        <FormControlLabel
+        {/* <FormControlLabel
           label="Column fixed"
           labelPlacement="start"
           control={
@@ -373,7 +373,7 @@ export function KanbanView() {
               inputProps={{ id: 'column-fixed-switch' }}
             />
           }
-        />
+        /> */}
       </Stack>
 
       {boardLoading ? renderLoading : <>{boardEmpty ? renderEmpty : renderList}</>}

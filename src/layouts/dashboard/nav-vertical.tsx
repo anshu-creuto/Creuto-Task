@@ -39,7 +39,7 @@ export function NavVertical({
   const renderNavVertical = (
     <>
       {slots?.topArea ?? (
-        <Box sx={{ display: 'flex', justifyContent: 'center', pt: 2.5, pb: 1 }}>
+        <Box sx={{ display: 'flex',  pt: 2.5, pb: 1 }}>
           <AccountMenu />
           {/* <NotificationsDrawer /> */}
         </Box>

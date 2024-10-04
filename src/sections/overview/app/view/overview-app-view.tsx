@@ -35,7 +35,7 @@ export function OverviewAppView() {
 
   return (
     <DashboardLayout>
-      <Typography marginTop={5}> I am a div </Typography>
+      <Typography marginTop={5}> KANBAN </Typography>
     </DashboardLayout>
   );
 }
