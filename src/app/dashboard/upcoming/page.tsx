@@ -1,19 +1,23 @@
+"use client";
 import React from 'react';
-import {
-  Container,
-  Typography,
-  List,
-  ListItem,
-  ListItemText,
-  Checkbox,
-  Button,
-  Divider,
-  IconButton,
-} from '@mui/material';
+
 import { Box } from '@mui/system';
 import TodayIcon from '@mui/icons-material/Today';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import {
+  List,
+  Button,
+  Divider,
+  ListItem,
+  Checkbox,
+  Container,
+  Typography,
+  IconButton,
+  ListItemText,
+} from '@mui/material';
+
+import AddTaskButton from '../components/task/AddTaskButton';
 
 const tasks = [
   { id: 1, title: 'Get started by completing this task', date: '30 Sep', completed: true },
@@ -48,6 +52,7 @@ const TaskList = () => (
         </IconButton>
         <IconButton>
           <TodayIcon />
+          {/* <DatePicker /> */}
         </IconButton>
         <IconButton>
           <ChevronRightIcon />
@@ -98,27 +103,21 @@ const TaskList = () => (
       <Typography variant="subtitle2" color="textSecondary">
         4 Oct · Today · Friday
       </Typography>
-      <Button variant="outlined" size="small" sx={{ marginTop: '1rem' }}>
-        + Add task
-      </Button>
+      <AddTaskButton />
     </Box>
 
     <Box sx={{ marginTop: '2rem' }}>
       <Typography variant="subtitle2" color="textSecondary">
         5 Oct · Tomorrow · Saturday
       </Typography>
-      <Button variant="outlined" size="small" sx={{ marginTop: '1rem' }}>
-        + Add task
-      </Button>
+      <AddTaskButton />
     </Box>
 
     <Box sx={{ marginTop: '2rem' }}>
       <Typography variant="subtitle2" color="textSecondary">
         6 Oct · Sunday
       </Typography>
-      <Button variant="outlined" size="small" sx={{ marginTop: '1rem' }}>
-        + Add task
-      </Button>
+      <AddTaskButton />
     </Box>
   </Container>
 );

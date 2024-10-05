@@ -1,6 +1,7 @@
+'use client';
+
 import React from 'react';
 
-import { Add as AddIcon } from '@mui/icons-material';
 import {
   Box,
   List,
@@ -11,6 +12,8 @@ import {
   ListItemIcon,
   ListItemText,
 } from '@mui/material';
+
+import AddTaskButton from '../components/task/AddTaskButton';
 
 const InboxComponent = () => (
   <Container maxWidth="md" sx={{ py: 4, minHeight: '100vh' }}>
@@ -81,8 +84,7 @@ const InboxComponent = () => (
           justifyContent: 'center',
         }}
       >
-        <AddIcon fontSize="small" sx={{ mr: 1 }} />
-        <Typography>Add task</Typography>
+        <AddTaskButton />
       </Box>
     </Box>
   </Container>
